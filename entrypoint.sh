@@ -1,5 +1,10 @@
 #!/bin/sh -l
-
+cd ..
+pwd
+ls
+cd ..
+pwd
+ls
 cd $1
 echo "Current working directory is $PWD"
 ls
