@@ -2,6 +2,10 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
+  working-directory: #working directory
+    description: 'The working directory to execute the action'
+    required: false
+    default: '$PWD'
   who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
@@ -13,4 +17,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{ inputs.working-directory }}
     - ${{ inputs.who-to-greet }}
