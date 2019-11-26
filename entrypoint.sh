@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
-echo "Hello $1"
+cd $1
+echo "Current working directory is $PWD"
+echo "Hello $2"
 time=$(date)
 echo ::set-output name=time::$time
