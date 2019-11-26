@@ -1,10 +1,15 @@
 #!/bin/sh -l
+echo "**********************************"
 cd ..
 pwd
+echo "====="
 ls
-cd ..
+echo "**********************************"
+cd home
 pwd
+echo "====="
 ls
+echo "**********************************"
 cd $1
 echo "Current working directory is $PWD"
 ls
