@@ -10,6 +10,11 @@ pwd
 echo "========================"
 ls
 echo "**********************************"
+cd /home/runner/work/TestClock
+pwd
+echo "========================"
+ls
+echo "**********************************"
 cd $1
 echo "Current working directory is $PWD"
 ls
