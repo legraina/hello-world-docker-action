@@ -10,7 +10,10 @@ pwd
 echo "========================"
 ls
 echo "**********************************"
-cd home/runner/work/TestClock
+cd home
+cd runner
+cd work
+cd TestClock
 pwd
 echo "========================"
 ls
