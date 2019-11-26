@@ -5,7 +5,7 @@ pwd
 echo "====="
 ls
 echo "**********************************"
-cd home
+cd workflow
 pwd
 echo "====="
 ls
