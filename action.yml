@@ -5,7 +5,7 @@ inputs:
   working-directory: #working directory
     description: 'The working directory to execute the action'
     required: false
-    default: '$PWD'
+    default: '.'
   who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
