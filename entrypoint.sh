@@ -1,5 +1,6 @@
 #!/bin/sh -l
-
+cd ..
+ls
 cd $1
 echo "Current working directory is $PWD"
 echo "Hello $2"
