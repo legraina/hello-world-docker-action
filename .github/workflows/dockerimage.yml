@@ -9,8 +9,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Login GitHub Packages
-        run: docker login -u bright -p ${{ secrets.GITHUB_TOKEN }} docker.pkg.github.com
+#      - name: Login GitHub Packages
+#        run: docker login -u bright -p ${{ secrets.GITHUB_TOKEN }} docker.pkg.github.com
 
       - name: Install image
         run: docker pull docker.pkg.github.com/briranactions/hello-world-docker-action/hello-world-docker-action:1.1
