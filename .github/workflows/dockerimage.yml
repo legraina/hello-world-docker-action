@@ -9,8 +9,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
+      - name: Login GitHub Packages
+        run: docker login -u bright -p ${{ secrets.GITHUB_TOKEN }} docker.pkg.github.com
+
       - name: List images
         run: docker images
 
+      - name: Tag image
+        run: docker tag 965ea09ff2eb docker.pkg.github.com/briranactions/hello-world-docker-action/alpine:3.10
+
 #      - name: Build the Docker image
 #        run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
+      - name: Publish image
+        run: docker push docker.pkg.github.com/briranactions/hello-world-docker-action/alpine:3.10
