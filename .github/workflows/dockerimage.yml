@@ -12,11 +12,11 @@ jobs:
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag hello-world-docker-action:1.0
 
-      - name: Login GitHub Packages
-        run: docker login -u bright -p ${{ secrets.GITHUB_TOKEN }} docker.pkg.github.com
-
       - name: List images
         run: docker images
+
+      - name: Login GitHub Packages
+        run: docker login -u bright -p ${{ secrets.GITHUB_TOKEN }} docker.pkg.github.com
 
 #      - name: Tag image
 #        run: docker tag 965ea09ff2eb docker.pkg.github.com/briranactions/hello-world-docker-action/alpine:3.10
