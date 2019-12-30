@@ -12,14 +12,11 @@ jobs:
       - name: Login GitHub Packages
         run: docker login -u bright -p ${{ secrets.GITHUB_TOKEN }} docker.pkg.github.com
 
-      - name: Install image
-        run: docker pull docker.pkg.github.com/briranactions/hello-world-docker-action/hello-world-docker-action:1.1
-
 #      - name: Build the Docker image
 #        run: docker build . --file Dockerfile --tag docker.pkg.github.com/briranactions/hello-world-docker-action/hello-world-docker-action:1.1
 
-#      - name: List images
-#        run: docker images
-
 #      - name: Publish image
 #        run: docker push docker.pkg.github.com/briranactions/hello-world-docker-action/hello-world-docker-action:1.1
+
+      - name: Install image
+        run: docker pull docker.pkg.github.com/briranactions/hello-world-docker-action/hello-world-docker-action:1.1
