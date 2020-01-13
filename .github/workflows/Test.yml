@@ -6,7 +6,7 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
-    container: node:10.16-jessie
+    container: ubuntu:16.04
     steps:
       - name: Add Git to PATH
         shell: bash
