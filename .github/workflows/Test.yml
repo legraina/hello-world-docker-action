@@ -8,6 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     container: node:10.16-jessie
     steps:
+      - name: Add Git to PATH
+        shell: bash
+        run: |
+          git --version
+          export PATH="$HOME/opt/git/bin:$PATH"
+
       - name: Checkout
         uses: actions/checkout@v2
 
