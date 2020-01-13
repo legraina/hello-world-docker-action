@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Login GitHub Packages
         run: docker login -u bright -p ${{ secrets.GITHUB_TOKEN }} docker.pkg.github.com
@@ -18,5 +18,5 @@ jobs:
 #      - name: Publish image
 #        run: docker push docker.pkg.github.com/briranactions/hello-world-docker-action/hello-world-docker-action:1.1
 
-      - name: Install image
-        run: docker pull docker.pkg.github.com/briranactions/hello-world-docker-action/hello-world-docker-action:1.1
+#      - name: Install image
+#        run: docker pull docker.pkg.github.com/briranactions/hello-world-docker-action/hello-world-docker-action:1.1
