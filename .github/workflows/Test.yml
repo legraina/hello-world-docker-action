@@ -12,6 +12,7 @@ jobs:
         shell: bash
         run: |
           git --version
+          sudo apt-get install git
           export PATH="$HOME/opt/git/bin:$PATH"
 
       - name: Checkout
