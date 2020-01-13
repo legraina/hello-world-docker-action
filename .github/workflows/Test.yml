@@ -6,7 +6,7 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
-    container: ubuntu:16.04
+    container: ubuntu:18.04
     steps:
       - name: Add Git to PATH
         run: |
