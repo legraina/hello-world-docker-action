@@ -9,3 +9,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Check diredtories
+        run: |
+          echo "**************************************************************"
+          echo "The GITHUB_WORKSPACE is:"
+          echo "$GITHUB_WORKSPACE"
+          echo "**************************************************************"
+          echo "Current working directory is:"
+          echo "$PWD"
+          echo "**************************************************************"
