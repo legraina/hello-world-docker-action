@@ -13,6 +13,7 @@ jobs:
           curl -O https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.17.1.tar.gz
           tar xzf ./git-2.17.1.tar.gz
           cd git-2.17.1
+          sudo apt install git-all
           make configure
           ./configure --prefix=/usr
           make all doc info
