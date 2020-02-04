@@ -16,7 +16,7 @@ jobs:
       - name: Test Cache
         uses: actions/cache@v1
         with:
-          path: ${{ GITHUB_WORKFLOW }}
+          path: ${{ env.GITHUB_WORKFLOW }}
           key: ${{ runner.os }}-build-${{ env.CACHE_NAME }}-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.CACHE_NAME }}-
