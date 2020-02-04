@@ -2,45 +2,23 @@ name: Test
 
 on: push
 
+env:
+  CACHE_NAME: cache-image
+
 jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
-    container: ubuntu:18.04
     steps:
-      - name: Add Git to PATH
-        run: |
-          sudo apt-get install git
-          export PATH="$HOME/opt/git/bin:$PATH"
-          git --version
-
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Check diredtories
-        run: |
-          echo "**************************************************************************************************"
-          echo "The GITHUB_WORKSPACE is:"
-          echo "$GITHUB_WORKSPACE"
-          echo "**************************************************************************************************"
-          echo "Current working directory is:"
-          echo "$PWD"
-          ls
-          echo "**************************************************************************************************"
-          cd AddTwoNumbers
-          echo "$PWD"
-          ls
-          echo "**************************************************************************************************"
-
-      - name: Checkout submodule
-        shell: bash
-        run: |
-          echo "**************************************************************************************************"
-          echo "$PWD"
-          git submodule init
-          git submodule update
-          echo "**************************************************************************************************"
-          cd AddTwoNumbers
-          echo "$PWD"
-          ls
-          echo "**************************************************************************************************"
+      - name: Test Cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ GITHUB_WORKFLOW }}
+          key: ${{ runner.os }}-build-${{ env.CACHE_NAME }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.CACHE_NAME }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
