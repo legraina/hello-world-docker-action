@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
-cd $1
-echo "Current working directory is $PWD"
+
+echo "Current working directory is $PWD" > $1
 ls
 echo "Hello $2"
 time=$(date)
