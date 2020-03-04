@@ -2,14 +2,10 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  create-file: #create file
-    description: 'The path of the file will be created'
-    required: false
-    default: 'test.txt'
   who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
-    default: 'World'
+    default: 'Bright Ran'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -17,5 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.create-file }}
     - ${{ inputs.who-to-greet }}
