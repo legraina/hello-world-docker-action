@@ -1,8 +1,13 @@
 #!/bin/sh -l
 
-
-echo "Current working directory is $PWD" > $1
-ls
-echo "Hello $2"
+echo "Hello $1"
 time=$(date)
-echo ::set-output name=time::$time
+echo "Meeting at $time"
+
+echo "run mkdir -p $HOME/.m2/repository"
+mkdir -p $HOME/.m2/repository
+echo "********************************ls in #HOME********************************"
+echo $HOME
+ls -lah $HOME
+echo "******************************ls in $HOME/.m2******************************"
+ls -lah $HOME/.m2
