@@ -1,0 +1,11 @@
+name: Test my action
+
+on: push
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hellow World
+        uses: BriRanActions/hello-world-docker-action@master
