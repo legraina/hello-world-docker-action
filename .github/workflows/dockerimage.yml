@@ -4,7 +4,7 @@ on: push
 
 jobs:
   build_release:
-    name: Build and Release the Image
+    name: Build and Release my action
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
