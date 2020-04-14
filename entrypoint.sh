@@ -4,5 +4,5 @@ echo "Hello $1"
 time=$(date)
 echo "Meeting at $time"
 
-echo "$PWD"
-echo "$GITHUB_WORKSPACE"
+echo "PWD = $PWD"
+echo "GITHUB_WORKSPACE = $GITHUB_WORKSPACE"
