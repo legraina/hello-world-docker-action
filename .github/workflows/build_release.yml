@@ -5,7 +5,7 @@ on:
     paths: 
       - '**'
       - '!.github/workflows/**'
-      - '.github/workflows/dockerimage.yml'
+      - '.github/workflows/build_release.yml'
 
 jobs:
   build_release:
