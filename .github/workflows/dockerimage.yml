@@ -1,6 +1,11 @@
 name: Build and Release
 
-on: push
+on:
+  push:
+    paths: 
+      - '**'
+      - '!.github/workflows/**'
+      - '.github/workflows/dockerimage.yml'
 
 jobs:
   build_release:
