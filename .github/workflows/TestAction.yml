@@ -7,5 +7,10 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Hellow World
-        uses: TestCustomActionsRML/hello-world-docker-action@master
+        uses: ./
+        with:
+          who-to-greet: RML
