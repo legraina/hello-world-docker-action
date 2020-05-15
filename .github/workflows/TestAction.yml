@@ -12,5 +12,3 @@ jobs:
 
       - name: Hellow World
         uses: ./
-        with:
-          who-to-greet: RanMaoliang
