@@ -1,6 +1,7 @@
 #!/bin/sh -l
 
 echo "Hello $1"
+echo "I am $2"
 time=$(date)
 echo "Meeting at $time"
 
