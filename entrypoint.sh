@@ -5,9 +5,6 @@ echo "I am $2"
 time=$(date)
 echo "Meeting at $time"
 
-echo "PWD = $PWD"
-echo "GITHUB_WORKSPACE = $GITHUB_WORKSPACE"
-
 echo "======================================="
 echo "List All Environment Variables:"
 printenv
