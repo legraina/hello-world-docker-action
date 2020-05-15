@@ -12,5 +12,8 @@ jobs:
 
       - name: Hellow World
         uses: ./
+
+      - name: Hellow Joe
+        uses: ./
         with:
-          who-to-greet: joe
+          who-to-greet: Joe
