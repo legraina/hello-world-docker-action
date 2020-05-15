@@ -13,4 +13,4 @@ jobs:
       - name: Hellow World
         uses: ./
         with:
-          who-to-greet: RML
+          who-to-greet: RanMaoliang
